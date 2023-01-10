@@ -10,7 +10,7 @@ pipeline {
         
         stage ('Deploy to k8s') {
             steps {
-                 sh "kubectl apply -f ~/workspace/ingress/ingress.yaml"
+                 sh "kubectl apply -f ~/workspace/k8s/Ingress/ingress.yaml"
             }
         }
     }
