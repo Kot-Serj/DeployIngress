@@ -17,10 +17,10 @@ spec:
         project: ingress
     spec:
       containers:
-        - name : ingress
-          image: "kotara2905/ingress:lates"
-        nodeSelector:
-          disktype: ingress
+      - name : ingress
+        image: "kotara2905/ingress:lates"
+      nodeSelector:
+        disktype: ingress
 
 
 ---
