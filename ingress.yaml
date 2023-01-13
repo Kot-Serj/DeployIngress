@@ -1,21 +1,15 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: charts.nginx.org/v1alpha1
+kind: NginxIngress
 metadata:
-  name: ingress
-controller:
-  image:
-    registry: kotara2905/ingress
+  name: nginxingress-sample
+  namespace: nginx-ingress
 spec:
-  rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-        type: NodePort
-    nodePorts:
-      http: 31080
-      https: 31443
-      tcp:
-        8080: 32808
+  controller:
+    image:
+      pullPolicy: IfNotPresent
+      repository: nginx/nginx-ingress
+      tag: 3.0.0-ubi
+    ingressClass: nginx
+    kind: deployment
+    nginxplus: false
+    replicaCount: 1
