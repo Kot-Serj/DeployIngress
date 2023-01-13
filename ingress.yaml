@@ -2,7 +2,6 @@ apiVersion : apps/v1
 kind: Ingress
 metadata:
   name: ingress
-  namespace: nginx-ingress
 spec:
   controller:
     image:
