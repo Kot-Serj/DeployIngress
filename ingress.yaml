@@ -1,5 +1,5 @@
 apiVersion : apps/v1
-kind: NginxIngress
+kind: Ingress
 metadata:
   name: ingress
   namespace: nginx-ingress
