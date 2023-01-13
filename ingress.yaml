@@ -4,5 +4,5 @@ metadata:
   name: ingress
 spec:
   containers:
-    - name : container-hello
+    - name : ingress
       image: kotara2905/ingress
