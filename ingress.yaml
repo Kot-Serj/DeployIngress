@@ -1,29 +1,8 @@
-apiVersion: charts.nginx.org/v1alpha1
-kind: NginxIngress
+apiVersion : v1
+kind: Pod
 metadata:
   name: ingress
-  namespace: nginx-ingress
 spec:
-  controller:
-    image:
-      repository: kotara2905/ingress:lates
-    ingressClass: nginx
-    kind: deployment
-    nginxplus: false
-    replicaCount: 1
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    name: nginx-ingress
-  name: nginx-ingress
-spec:
-  ports:
-    - protocol: "TCP"
-      port: 80
-      targetPort: 4200
-  selector:
-    app: nginx-ingress
+  containers:
+    - name : container-hello
+      image: kotara2905/ingress
