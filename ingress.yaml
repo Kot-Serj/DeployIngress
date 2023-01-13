@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name : ingress
-      image: kotara2905/ingress
+      image: kotara2905/ingress:lates
