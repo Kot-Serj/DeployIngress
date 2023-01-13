@@ -1,7 +1,7 @@
-apiVersion: charts.nginx.org/v1alpha1
+apiVersion : apps/v1
 kind: NginxIngress
 metadata:
-  name: nginxingress-sample
+  name: ingress
   namespace: nginx-ingress
 spec:
   controller:
