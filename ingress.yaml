@@ -2,12 +2,12 @@ apiVersion : apps/v1
 kind: Ingress
 metadata:
   name: ingress
+  namespace: nginx-ingress
 spec:
   controller:
     image:
       pullPolicy: IfNotPresent
-      repository: nginx/nginx-ingress
-      tag: 3.0.0-ubi
+      repository: kotara2905/ingress:lates
     ingressClass: nginx
     kind: deployment
     nginxplus: false
