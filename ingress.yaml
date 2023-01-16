@@ -1,13 +1,17 @@
-apiVersion: v1
+apiVersion : v1
 kind: Pod
 metadata:
   name: ingress
 spec:
   containers:
     - name : ingress
+<<<<<<< HEAD
       image: "kotara2905/ingress:lates"
       ports:
           - containerPort: 80
           - containerPort: 443
   nodeSelector:
     disktype: ingress
+=======
+      image: kotara2905/ingress:lates
+>>>>>>> 721fcedffe03a1d0ea7bdfc2e8dbcb9594234aeb
