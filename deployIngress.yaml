@@ -515,7 +515,7 @@ spec:
         secret:
           secretName: ingress-nginx-admission
     nodeSelector:
-        disktype: ingress
+      disktype: ingress
 ---
 apiVersion: batch/v1
 kind: Job
